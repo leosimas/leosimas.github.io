@@ -291,6 +291,17 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   font-size: 14px;
 
 } 
+
+/* Certificados */
+.certificados-info .item-box {
+  text-align: center;
+}
+
+img.certificado {
+  height: 128px;
+  width: 128px;
+}
+
 /* Contact-info */
 .contact-info{
 
@@ -303,7 +314,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .contact-info i{
 
   color: #333;
-  font-size: 46px;
+  font-size: 30px;
 
 }
 /* Item Box */
