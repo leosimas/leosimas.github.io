@@ -358,9 +358,36 @@ img.certificado {
 }
 .work li h5{
   float: left;
+  margin-bottom: 0px;
 }
 .work li p{
   clear: both;
+}
+.work li i {
+  clear: both;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.work li p.tecnologias {
+  margin-bottom: 8px;
+}
+.work a,
+.work a:hover,
+.work a:focus,
+.work a:active {
+  color: dodgerblue;
+}
+
+.work .certificado {
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 56px;
+  height: 48px;
+}
+
+.work .certificado.android {
+  background-image: url('images/certified_aad.png');
 }
 
 /* Portfolio */
