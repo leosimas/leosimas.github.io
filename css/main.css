@@ -317,6 +317,16 @@ img.certificado {
   font-size: 30px;
 
 }
+
+#contact section {
+  text-align: center;
+}
+
+#contact section .g1 {
+  display: inline-block;
+  float: none;
+}
+
 /* Item Box */
 
 .item-box{
