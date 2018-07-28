@@ -378,16 +378,35 @@ img.certificado {
   color: dodgerblue;
 }
 
-.work .certificado {
+.work .item-certificado .descricao {
+  display: inline-block;
+  height: 100px;
+  /* position: relative; */
+}
+
+.work .item-certificado .descricao div {
+  float: left;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+}
+
+.work .item-certificado .icone {
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-left: 56px;
-  height: 48px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin-right: 16px;
 }
 
-.work .certificado.android {
-  background-image: url('images/certified_aad.png');
+.work .item-certificado .icone.android {
+  background-image: url('../images/certified_aad.png');
+}
+
+.work .item-certificado .icone.udacity {
+  background-image: url('../images/udacity.png');
 }
 
 /* Portfolio */
