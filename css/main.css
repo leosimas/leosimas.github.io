@@ -409,6 +409,17 @@ img.certificado {
   background-image: url('../images/udacity.png');
 }
 
+/* Experiencia */
+.work.exp li {
+  border-bottom: none;
+  margin-bottom: 1em;
+}
+.work.exp h6 {
+  float: left;
+  margin: 0px;
+  font-size: 1.1em
+}
+
 /* Portfolio */
 .image{
   position: relative;
