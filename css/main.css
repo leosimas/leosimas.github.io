@@ -181,6 +181,9 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 #header .visible{
   opacity: 1;
 }
+#header #logo i {
+  font-weight: normal;
+}
 
 /* Tabs */
 .etabs{
@@ -274,6 +277,10 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .info h4, #header h4{
   color: #999;
 }
+.info h4 i {
+  font-weight: normal;
+}
+
 /* Contact */
 .main-links{
 
@@ -382,12 +389,12 @@ img.certificado {
 .work li p.tecnologias {
   margin-bottom: 8px;
 }
-.work a,
+/* .work a,
 .work a:hover,
 .work a:focus,
 .work a:active {
   color: dodgerblue;
-}
+} */
 
 .work .item-certificado .descricao {
   display: inline-block;
@@ -402,8 +409,13 @@ img.certificado {
   transform: translateY(-50%); */
 }
 
+.work .item-certificado .descricao i {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
 .work .item-certificado .icone {
-  background-position: left;
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
@@ -747,6 +759,24 @@ Change widths as necessary
     width: 100%;
     text-align: center;
   }
+
+  .work .item-certificado .icone {
+    width : 100%;
+  }
+
+  .work .item-certificado .descricao {
+    width: 100%;
+  }
+
+  .work .item-certificado .descricao div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .work .item-certificado .descricao div h5 {
+    float: none;
+  }
+
 }
 
 
