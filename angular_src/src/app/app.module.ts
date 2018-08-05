@@ -7,6 +7,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
+
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './views/pages/home/home.component';
 import { ToolbarComponent } from './views/components/toolbar/toolbar.component';
@@ -21,9 +25,12 @@ library.add(fas, fab);
     ToolbarComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FontAwesomeModule,
-    AppRoutingModule
+    
+    MatButtonModule, MatIconModule, MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
