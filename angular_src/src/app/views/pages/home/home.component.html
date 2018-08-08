@@ -1,8 +1,16 @@
 <!-- <fa-icon icon="coffee"></fa-icon>
 <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
 <fa-icon [icon]="['fab', 'android']"></fa-icon> -->
-<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+<div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px"
+  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="center center" >
   <div class="profile"></div>
-  <div class="name">{{textName}}</div>
+  <div>
+    <h1 class="name">{{textName}}</h1>
+    <h2>
+      <fa-icon [icon]="['fab', 'android']"></fa-icon>
+      <fa-icon [icon]="['fab', 'apple']"></fa-icon>
+      {{textTitle}}
+    </h2>
+  </div>
 </div>
 <div>{{textIntro}}</div>
