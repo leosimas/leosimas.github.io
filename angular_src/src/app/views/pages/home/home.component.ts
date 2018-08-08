@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../../../services/profile.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  textName: string;
+  textIntro: string;
+
+  constructor(profileService: ProfileService) {
+    const p = profileService.get();
+    this.textName = p.name;
+  }
 
   ngOnInit() {
   }
