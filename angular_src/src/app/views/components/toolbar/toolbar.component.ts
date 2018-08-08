@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  onMenuClick: Function;
+
   constructor() { }
 
   ngOnInit() {
