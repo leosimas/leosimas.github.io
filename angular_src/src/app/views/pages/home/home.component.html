@@ -1,16 +1,16 @@
 <!-- <fa-icon icon="coffee"></fa-icon>
 <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
 <fa-icon [icon]="['fab', 'android']"></fa-icon> -->
-<div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px"
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px"
   fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="center center" >
   <div class="profile"></div>
   <div>
-    <h1 class="name">{{textName}}</h1>
-    <h2>
+    <h1 ngClass="name center" ngClass.gt-xs="name" >{{textName}}</h1>
+    <h2 ngClass.xs="center">
       <fa-icon [icon]="['fab', 'android']"></fa-icon>
       <fa-icon [icon]="['fab', 'apple']"></fa-icon>
       {{textTitle}}
     </h2>
   </div>
 </div>
-<div>{{textIntro}}</div>
+<p class="center intro">{{textIntro}}</p>
