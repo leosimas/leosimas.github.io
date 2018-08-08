@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
 
+export class Profile {
+  name: string;
+  intro: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
 
-  data;
+  private profile: Profile;
 
   constructor() {
-    this.data = {
-      name : 'Leonardo Simas Gonçalves',
-      
-    }
+    const p = this.profile = new Profile();
+    p.name = 'Leonardo Simas Gonçalves';
+  }
+
+  get(): Profile {
+    return this.profile;
   }
 }
