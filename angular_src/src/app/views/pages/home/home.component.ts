@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     const p = profileService.get();
     this.textName = p.name;
     this.textTitle = p.title;
+    this.textIntro = p.intro;
   }
 
   ngOnInit() {

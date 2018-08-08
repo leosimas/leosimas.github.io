@@ -17,6 +17,9 @@ export class ProfileService {
     const p = this.profile = new Profile();
     p.name = 'Leonardo Simas Gonçalves';
     p.title = 'Mobile Developer';
+    p.intro = 'Sou Leonardo, analista de sistemas focado em mobile.'
+      + ' Adoro participar de projetos Android e iOS com tecnologias nativas ou híbridas.';
+    
   }
 
   get(): Profile {
