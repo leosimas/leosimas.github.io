@@ -1,6 +1,6 @@
 <app-toolbar #appToolbar></app-toolbar>
-<mat-drawer-container hasBackdrop="true">
-  <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
+<mat-drawer-container [hasBackdrop]="drawerHasBackdrop">
+  <mat-drawer #drawer [mode]="drawerMode" class="drawer">I'm a drawer</mat-drawer>
   <mat-drawer-content>
     <div class="content">
       <router-outlet></router-outlet>
