@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button (click)="onMenuClick()">
+    <button *ngIf="!showMenuOptions" mat-icon-button (click)="onMenuClick()">
       <mat-icon aria-label="menu">menu</mat-icon>
     </button>
   </mat-toolbar-row>
