@@ -15,6 +15,7 @@ import {MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule} from
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/pages/home/home.component';
 import { ToolbarComponent } from './views/components/toolbar/toolbar.component';
+import { ContactComponent } from './views/pages/contact/contact.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(fas, fab);
@@ -23,7 +24,8 @@ library.add(fas, fab);
   declarations: [
     AppComponent,
     HomeComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
