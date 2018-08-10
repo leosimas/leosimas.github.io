@@ -54,5 +54,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   onMenuItemClick(item: MenuItem) {
     this.menuService.navigate(item);
+    this.drawer.close();
   }
 }

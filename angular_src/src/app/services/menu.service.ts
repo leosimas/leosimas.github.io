@@ -21,7 +21,7 @@ export class MenuService {
     this.items = [
       new MenuItem('', 'Home'),
       new MenuItem('', 'Currículo'),
-      new MenuItem('', 'Contato')
+      new MenuItem('contact', 'Contato')
     ];
   }
 
