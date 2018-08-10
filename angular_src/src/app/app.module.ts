@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/pages/home/home.component';
 import { ToolbarComponent } from './views/components/toolbar/toolbar.component';
 import { ContactComponent } from './views/pages/contact/contact.component';
+import { ResumeComponent } from './views/pages/resume/resume.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(fas, fab);
@@ -25,7 +26,8 @@ library.add(fas, fab);
     AppComponent,
     HomeComponent,
     ToolbarComponent,
-    ContactComponent
+    ContactComponent,
+    ResumeComponent
   ],
   imports: [
     AppRoutingModule,
