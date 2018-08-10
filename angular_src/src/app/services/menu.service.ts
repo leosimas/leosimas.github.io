@@ -20,8 +20,8 @@ export class MenuService {
   constructor(private router: Router) {
     this.items = [
       new MenuItem('', 'Home'),
-      new MenuItem('resume', 'Currículo'),
-      new MenuItem('contact', 'Contato')
+      new MenuItem('/resume', 'Currículo'),
+      new MenuItem('/contact', 'Contato')
     ];
   }
 

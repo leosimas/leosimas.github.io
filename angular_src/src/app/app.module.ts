@@ -10,13 +10,14 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatCardModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/pages/home/home.component';
 import { ToolbarComponent } from './views/components/toolbar/toolbar.component';
 import { ContactComponent } from './views/pages/contact/contact.component';
 import { ResumeComponent } from './views/pages/resume/resume.component';
+import { ContactCardComponent } from './views/components/contact-card/contact-card.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(fas, fab);
@@ -27,7 +28,8 @@ library.add(fas, fab);
     HomeComponent,
     ToolbarComponent,
     ContactComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactCardComponent
   ],
   imports: [
     AppRoutingModule,
@@ -35,7 +37,8 @@ library.add(fas, fab);
     BrowserAnimationsModule,
     FontAwesomeModule,
     FlexLayoutModule,
-    MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule
+    MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -22,8 +22,6 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(media: ObservableMedia, private menuService: MenuService) {
     this.menuItems = menuService.getItems();
     this.watcher = media.subscribe((change: MediaChange) => {
-      console.log(change);
-      console.log(change.mqAlias);
       this.setSideDrawerStyle( change );
     });
   }
