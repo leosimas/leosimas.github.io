@@ -1,3 +1,6 @@
-<div *ngFor="let contact of contacts">
-  <app-contact-card [contact]="contact"></app-contact-card>
+<div fxLayout="column"
+  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-evenly">
+  <app-contact-card *ngFor="let contact of contacts; let last = last"
+    ngClass="{{last ? '' : 'marginBottom'}}"
+    [contact]="contact"></app-contact-card>
 </div>

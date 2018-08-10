@@ -5,7 +5,7 @@ import { ContactComponent } from './views/pages/contact/contact.component';
 import { ResumeComponent } from './views/pages/resume/resume.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: ContactComponent},// HomeComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent }
 ];
