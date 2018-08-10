@@ -3,5 +3,9 @@
 }
 
 .drawer {
-    min-width : 256px;
+    min-width : 200px;
+
+    .mat-button {
+        text-align: start;
+    }
 }

@@ -3,5 +3,8 @@
     <button *ngIf="!showMenuOptions" mat-icon-button (click)="onMenuClick()">
       <mat-icon aria-label="menu">menu</mat-icon>
     </button>
+    <div *ngIf="showMenuOptions" fxLayout="row" fxLayoutAlign="start center">
+      <button mat-button *ngFor="let item of menuItems" (click)="onMenuItemClick(item)">{{item.text}}</button>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
