@@ -10,7 +10,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatChipsModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/pages/home/home.component';
@@ -40,7 +40,7 @@ library.add(fas, fab);
     FontAwesomeModule,
     FlexLayoutModule,
     MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule,
-    MatCardModule
+    MatCardModule, MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
