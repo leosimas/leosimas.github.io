@@ -1,6 +1,5 @@
 <div fxLayout="column"
-  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-evenly">
-  <app-contact-card *ngFor="let contact of contacts; let last = last"
-    ngClass="{{last ? '' : 'marginBottom'}}"
+  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-evenly" fxLayoutGap="16px">
+  <app-contact-card *ngFor="let contact of contacts"
     [contact]="contact"></app-contact-card>
 </div>
