@@ -48,9 +48,9 @@ export class ProfileService {
       {
         title : 'Analista de Sistemas - Mobile',
         text : 'Experiência na atuação como líder técnico e tutor de equipes mobiles.'+
-          'Experiência em análise e desenvolvimento de aplicações móveis, além de elaboração de arquitetura das soluções.'+
-          'Desenvolvimento de soluções nativas para Android, iOS e Windows Phone, integração a serviços Web, Android NDK e personalização do sistema operacional Android.'+
-          'Desenvolvimento em tecnologias híbridas: Ionic, Cordova e IBM MobileFirst, para Android, iOS e Windows Phone.'
+          ' Experiência em análise e desenvolvimento de aplicações móveis, além de elaboração de arquitetura das soluções.'+
+          ' Desenvolvimento de soluções nativas para Android, iOS e Windows Phone, integração a serviços Web, Android NDK e personalização do sistema operacional Android.'+
+          ' Desenvolvimento em tecnologias híbridas: Ionic, Cordova e IBM MobileFirst, para Android, iOS e Windows Phone.'
       }
     ];
     p.contacts = [
@@ -58,8 +58,8 @@ export class ProfileService {
       new Contact(ContactType.linkedin, 'leonardosimas')
     ];
     p.certifications = [
-      new Certification('Associate Android Developer', 'Google Certified', 'android'),
-      new Certification('iOS Developer Nanodegree', '', 'udacity')
+      new Certification('Associate Android Developer', 'Google Certified', 'android', 'https://www.credential.net/r358j69n'),
+      new Certification('iOS Developer Nanodegree', '', 'udacity', '/assets/certifications/ios_nanodegree_leo.pdf')
     ];
     p.formation = [
       new Graduation(2013, 'Bacharelado em Sistemas de Informação', 'UNEB - Universidade do Estado da Bahia')
