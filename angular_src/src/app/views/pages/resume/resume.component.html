@@ -1,11 +1,11 @@
 <h2 ngClass.gt-sm="center">Atuação</h2>
-<div *ngFor="let role of roles" class="role">
+<mat-card *ngFor="let role of roles" class="role" ngClass.gt-sm="marginCenter">
   <h3 ngClass.gt-sm="center">{{role.title}}</h3>
-  <p ngClass.gt-sm="marginCenter">{{role.text}}</p>
-</div>
+  <p>{{role.text}}</p>
+</mat-card>
 
 <h2 ngClass.gt-sm="center">Formação</h2>
-<mat-card *ngFor="let grad of formation" class="grad-card">
+<mat-card *ngFor="let grad of formation" class="grad-card" ngClass.gt-sm="marginCenter">
   <div fxLayout="row" fxLayoutAlign="end start">
     <h3 fxFlex>{{grad.title}}</h3>
     <mat-chip-list><mat-chip disabled selected>{{grad.year}}</mat-chip></mat-chip-list>
