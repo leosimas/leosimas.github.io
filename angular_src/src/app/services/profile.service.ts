@@ -42,8 +42,8 @@ export class ProfileService {
     p.name = 'Leonardo';
     p.fullName = 'Leonardo Simas Gonçalves';
     p.title = 'Mobile Developer';
-    p.intro = 'Sou Leonardo, analista de sistemas focado em mobile.'
-      + ' Adoro participar de projetos Android e iOS com tecnologias nativas ou híbridas.';
+    p.intro = 'Sou Leonardo, analista de sistemas focado em mobile.<br/>'
+      + 'Adoro atuar em projetos Android e iOS com tecnologias nativas e híbridas também.<br/>';
     p.roles = [
       {
         title : 'Analista de Sistemas - Mobile',
