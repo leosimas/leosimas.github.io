@@ -1,0 +1,11 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+  <mat-card *ngFor="let skill of skills; let last = last"
+    class="card-category">
+    <h3>{{skill.category}}</h3>
+    <div *ngFor="let item of skill.list; let lastItem = last"
+      class="skillItem">
+      <span class="name">{{item.name}}</span>
+      <mat-progress-bar mode="determinate" value="{{item.value}}"></mat-progress-bar>
+    </div>
+  </mat-card>
+</div>

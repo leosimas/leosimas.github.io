@@ -1,0 +1,21 @@
+.profile {
+    height: 200px;
+    width: 200px;
+
+    background-image: url("/assets/images/profile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.name {
+    text-transform: uppercase;
+}
+
+.intro {
+    font-size: 1.2em;
+}

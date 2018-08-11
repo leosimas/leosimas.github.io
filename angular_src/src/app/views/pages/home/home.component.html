@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px"
+  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="center center" >
+  <div class="profile"></div>
+  <div>
+    <h1 ngClass="name center" ngClass.gt-xs="name" >{{textName}}</h1>
+    <h2 ngClass.xs="center">
+      <fa-icon [icon]="['fab', 'android']"></fa-icon>
+      <fa-icon [icon]="['fab', 'apple']"></fa-icon>
+      {{textTitle}}
+    </h2>
+  </div>
+</div>
+<p class="center intro" [innerHtml]="textIntro"></p>
+
+<div fxLayout="column"
+  fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch" fxLayoutGap="16px">
+  <app-certification-card *ngFor="let cert of certifications"
+    [certification]="cert"></app-certification-card>
+</div>
