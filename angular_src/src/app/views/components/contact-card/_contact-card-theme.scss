@@ -10,10 +10,6 @@
   // Use mat-color to extract individual colors from a palette as necessary.
     app-contact-card {
         mat-card {
-            a, a:active, a:visited {
-                color: mat-color($primary);
-                text-decoration: none;
-            }
         }
     }
 

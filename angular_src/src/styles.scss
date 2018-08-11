@@ -34,11 +34,16 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 @import 'app/views/components/contact-card/contact-card-theme.scss';
 
 // Using the $theme variable from the pre-built theme you can call the theming function
-@include contact-card-theme($candy-app-theme);
+// @include contact-card-theme($candy-app-theme);
 
 body {
     margin: 0px;
     font-family: 'Roboto';
     color: #444;
     font-size: 1.1em;
+}
+
+a, a:active, a:visited {
+    color: mat-color($candy-app-primary);
+    text-decoration: none;
 }

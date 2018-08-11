@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Contact, ContactType } from '../views/components/contact-card/contact-card.component';
+import { Certification } from '../views/components/certification-card/certification-card.component';
 
 export class Profile {
   name: string;
   intro: string;
   title: string;
   contacts: Array<Contact>;
+  certifications: Array<Certification>;
 }
 
 @Injectable({
@@ -24,6 +26,10 @@ export class ProfileService {
     p.contacts = [
       new Contact(ContactType.email, 'contato@leosimas.com'),
       new Contact(ContactType.linkedin, 'leonardosimas')
+    ];
+    p.certifications = [
+      new Certification('Associate Android Developer', 'Google Certified', 'android'),
+      new Certification('iOS Developer Nanodegree', '', 'udacity')
     ];
   }
 

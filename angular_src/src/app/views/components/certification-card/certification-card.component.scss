@@ -1,0 +1,33 @@
+.icon {
+    width: 128px;
+    height: 128px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    $path :'../../../../assets/images/';
+
+    &.android {
+        background-image: url($path + 'certified_aad.png');
+    }
+
+    &.udacity {
+        background-image: url($path + 'udacity.png');
+    }
+}
+
+span {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5em;
+    a {
+        font-size: 1em;
+    }
+
+    &.description {
+        font-size: 1em;
+        font-weight: normal;
+        color: #555;
+    }
+}

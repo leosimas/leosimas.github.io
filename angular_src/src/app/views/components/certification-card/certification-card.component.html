@@ -1,3 +1,10 @@
-<p>
-  certification-card works!
-</p>
+<mat-card fxLayout="column" fxLayoutAlign="space-around center">
+  <div class="icon {{certification.iconClass}}"></div>
+  <span>
+    {{certification.title}}
+    <a [href]="certification.url" target="_blank">
+        <fa-icon icon="external-link-alt"></fa-icon>
+    </a>
+  </span>
+  <span class="description">{{certification.description}}</span>
+</mat-card>

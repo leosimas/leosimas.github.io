@@ -1,3 +1,6 @@
-<p>
-  resume works!
-</p>
+<div fxLayout="column"
+  fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch">
+  <app-certification-card *ngFor="let cert of certifications; let last = last"
+    ngClass="{{last ? '' : 'marginBottom'}}"
+    [certification]="cert"></app-certification-card>
+</div>

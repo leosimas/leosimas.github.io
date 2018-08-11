@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Certification } from '../../components/certification-card/certification-card.component';
+import { ProfileService } from '../../../services/profile.service';
 
 @Component({
   selector: 'app-resume',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor() { }
+  certifications: Array<Certification>;
+
+  constructor(profile: ProfileService) {
+    this.certifications = profile.get().certifications
+  }
 
   ngOnInit() {
   }
