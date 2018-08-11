@@ -4,6 +4,8 @@ import { MatDrawer } from '@angular/material';
 import { ObservableMedia, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 import { MenuService, MenuItem } from './services/menu.service';
+import { Title } from '../../node_modules/@angular/platform-browser';
+import { ProfileService } from './services/profile.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,11 @@ export class AppComponent implements OnInit, OnDestroy {
   watcher: Subscription;
   menuItems: Array<MenuItem>;
 
-  constructor(media: ObservableMedia, private menuService: MenuService) {
+  constructor(media: ObservableMedia,
+    private menuService: MenuService,
+    profile: ProfileService,
+    titleService: Title) {
+    titleService.setTitle( profile.get().name );
     this.menuItems = menuService.getItems();
     this.watcher = media.subscribe((change: MediaChange) => {
       this.setSideDrawerStyle( change );
