@@ -16,11 +16,23 @@
     p {
         text-align: justify;
     }
+    h4 {
+        margin-top: 0;
+    }
+    span {
+        color: #555;
+        .company {
+            font-size: 0.9em;
+        }
+    }
 }
 
-
-.grad-card {
-    h3 {
-        margin-top: 0;
+.job {
+    @extend .role;
+    h4 {
+        margin-bottom: 0;
+    }
+    &.marginBottom {
+        margin-bottom: 8px;
     }
 }
