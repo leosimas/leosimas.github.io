@@ -3,6 +3,7 @@ import { Contact, ContactType } from '../views/components/contact-card/contact-c
 import { Certification } from '../views/components/certification-card/certification-card.component';
 
 export class Profile {
+  pageTitle: string;
   name: string;
   fullName: string;
   intro: string;
@@ -35,6 +36,7 @@ export class ProfileService {
 
   constructor() {
     const p = this.profile = new Profile();
+    p.pageTitle = 'Leonardo Simas';
     p.name = 'Leonardo';
     p.fullName = 'Leonardo Simas Gonçalves';
     p.title = 'Mobile Developer';
