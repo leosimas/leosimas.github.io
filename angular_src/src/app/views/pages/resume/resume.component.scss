@@ -1,0 +1,34 @@
+.center {
+    text-align: center;
+}
+
+.marginCenter {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.role {
+
+    p {
+        text-align: justify;
+    }
+    h4 {
+        margin-top: 0;
+    }
+    span {
+        color: #555;
+        .company {
+            font-size: 0.9em;
+        }
+    }
+}
+
+.job {
+    @extend .role;
+    h4 {
+        margin-bottom: 0;
+    }
+    &.marginBottom {
+        margin-bottom: 8px;
+    }
+}

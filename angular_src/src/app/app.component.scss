@@ -1,0 +1,12 @@
+.content {
+    padding: 16px;
+    min-height:100vh;
+}
+
+.drawer {
+    min-width : 200px;
+
+    .mat-button {
+        text-align: start;
+    }
+}

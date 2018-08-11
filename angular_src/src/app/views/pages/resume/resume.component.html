@@ -1,0 +1,33 @@
+<h2 ngClass.gt-sm="center">Atuação</h2>
+<mat-card *ngFor="let role of roles" class="role" ngClass.gt-sm="marginCenter">
+  <h3 ngClass.gt-sm="center">{{role.title}}</h3>
+  <p>{{role.text}}</p>
+</mat-card>
+
+<h2 ngClass.gt-sm="center">Formação</h2>
+<mat-card *ngFor="let grad of formation" class="grad-card" ngClass.gt-sm="marginCenter">
+  <div fxLayout="row" fxLayoutAlign="end start">
+    <h3 fxFlex>{{grad.title}}</h3>
+    <mat-chip-list><mat-chip disabled selected>{{grad.year}}</mat-chip></mat-chip-list>
+  </div>
+  <span>{{grad.institute}}</span>
+</mat-card>
+
+<h2 ngClass.gt-sm="center">Qualificação</h2>
+<div fxLayout="column"
+  fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch" fxLayoutGap="16px">
+  <app-certification-card *ngFor="let cert of certifications"
+    [certification]="cert"></app-certification-card>
+</div>
+
+<h2 ngClass.gt-sm="center">Experiência</h2>
+<div fxLayout="column" fxLayoutGap="8px">
+  <mat-card *ngFor="let job of jobs" class="job" ngClass.gt-sm="marginCenter">
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <h4 fxFlex>{{job.title}}</h4>
+      <mat-chip-list><mat-chip disabled [selected]="job.current" >{{job.period}}</mat-chip></mat-chip-list>
+    </div>
+    <span class="company">{{job.company}}</span>
+  </mat-card>
+</div>
+

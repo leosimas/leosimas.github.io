@@ -1,0 +1,13 @@
+<app-toolbar #appToolbar></app-toolbar>
+<mat-drawer-container hasBackdrop="true">
+  <mat-drawer #drawer mode="over" class="drawer">
+    <div fxLayout="column" fxLayoutAlign="start">
+      <button mat-button *ngFor="let item of menuItems" (click)="onMenuItemClick(item)">{{item.text}}</button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
