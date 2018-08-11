@@ -1,6 +1,16 @@
+<h2 ngClass.gt-sm="center">Formação</h2>
+<mat-card *ngFor="let grad of formation" class="grad-card">
+  <div fxLayout="row" fxLayoutAlign="end start">
+    <h3 fxFlex>{{grad.title}}</h3>
+    <mat-chip-list><mat-chip disabled selected>{{grad.year}}</mat-chip></mat-chip-list>
+  </div>
+  <span>{{grad.institute}}</span>
+</mat-card>
+
+<h2 ngClass.gt-sm="center">Qualificação</h2>
 <div fxLayout="column"
   fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch">
   <app-certification-card *ngFor="let cert of certifications; let last = last"
-    ngClass="{{last ? '' : 'marginBottom'}}"
+    ngClass.lt-md="{{last ? '' : 'marginBottom'}}"
     [certification]="cert"></app-certification-card>
 </div>
