@@ -1,0 +1,11 @@
+.card-category {
+    max-width: 512px;
+    min-width: 200px;
+
+    .skillItem {
+        margin-bottom: 16px;
+        .name {
+            margin-bottom: 8px;
+        }
+    }
+}
