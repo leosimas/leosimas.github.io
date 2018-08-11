@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private menuService: MenuService,
     profile: ProfileService,
     titleService: Title) {
-    titleService.setTitle( profile.get().name );
+    titleService.setTitle( profile.get().pageTitle );
     this.menuItems = menuService.getItems();
     this.watcher = media.subscribe((change: MediaChange) => {
       this.setSideDrawerStyle( change );
