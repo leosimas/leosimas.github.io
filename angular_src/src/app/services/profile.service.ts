@@ -13,6 +13,7 @@ export class Profile {
   formation: Array<Graduation>;
   roles: Array<{title: string, text: string}>;
   jobs: Array<{}>;
+  skills: Array<{}>;
 }
 
 export class Graduation {
@@ -72,6 +73,25 @@ export class ProfileService {
       { title: 'Programador', company:'Instituto Recôncavo de Tecnologia', period: '2011 - 2012' },
       { title: 'Estagiário', company:'Instituto Recôncavo de Tecnologia', period: '2010 - 2011' },
       { title: 'Desenvolvedor', company:'Consult Jr. - UNEB', period: '2008 - 2010' }
+    ];
+    p.skills = [
+      {
+        category: 'Mobile',
+        list : [
+          { name: 'Android', value : 90 },
+          { name: 'iOS', value : 70 },
+          { name: 'Ionic', value : 50 }
+        ]
+      },
+      {
+        category: 'Programação',
+        list : [
+          { name: 'Java', value : 90 },
+          { name: 'Swift', value : 75 },
+          { name: 'JavaScript', value : 70 },
+          { name: 'TypeScript', value : 50 }
+        ]
+      }
     ];
   }
 

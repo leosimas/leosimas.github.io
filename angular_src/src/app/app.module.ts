@@ -19,6 +19,7 @@ import { ContactComponent } from './views/pages/contact/contact.component';
 import { ResumeComponent } from './views/pages/resume/resume.component';
 import { ContactCardComponent } from './views/components/contact-card/contact-card.component';
 import { CertificationCardComponent } from './views/components/certification-card/certification-card.component';
+import { SkillsComponent } from './views/pages/skills/skills.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(fas, fab);
@@ -31,7 +32,8 @@ library.add(fas, fab);
     ContactComponent,
     ResumeComponent,
     ContactCardComponent,
-    CertificationCardComponent
+    CertificationCardComponent,
+    SkillsComponent
   ],
   imports: [
     AppRoutingModule,
