@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(profileService: ProfileService) {
     const p = profileService.get();
-    this.textName = p.name;
+    this.textName = p.fullName;
     this.textTitle = p.title;
     this.textIntro = p.intro;
   }
