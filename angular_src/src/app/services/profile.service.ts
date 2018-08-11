@@ -12,6 +12,7 @@ export class Profile {
   certifications: Array<Certification>;
   formation: Array<Graduation>;
   roles: Array<{title: string, text: string}>;
+  jobs: Array<{}>;
 }
 
 export class Graduation {
@@ -61,6 +62,16 @@ export class ProfileService {
     ];
     p.formation = [
       new Graduation(2013, 'Bacharelado em Sistemas de Informação', 'UNEB - Universidade do Estado da Bahia')
+    ];
+    p.jobs = [
+      { title: 'Analista de Sistemas Sênior', company:'Capgemini', period: '2017 - atual', current: true },
+      { title: 'Analista de Sistemas Pleno', company:'Capgemini', period: '2014 - 2017' },
+      { title: 'Analista de Sistemas Júnior', company:'MTM Tecnologia', period: '2014' },
+      { title: 'Programador', company:'SENAI', period: '2013 - 2014' },
+      { title: 'Programador', company:'CPTec - UNEB', period: '2012 - 2013' },
+      { title: 'Programador', company:'Instituto Recôncavo de Tecnologia', period: '2011 - 2012' },
+      { title: 'Estagiário', company:'Instituto Recôncavo de Tecnologia', period: '2010 - 2011' },
+      { title: 'Desenvolvedor', company:'Consult Jr. - UNEB', period: '2008 - 2010' }
     ];
   }
 
