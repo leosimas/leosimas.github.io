@@ -1,3 +1,9 @@
+<h2 ngClass.gt-sm="center">Atuação</h2>
+<div *ngFor="let role of roles" class="role">
+  <h3 ngClass.gt-sm="center">{{role.title}}</h3>
+  <p ngClass.gt-sm="marginCenter">{{role.text}}</p>
+</div>
+
 <h2 ngClass.gt-sm="center">Formação</h2>
 <mat-card *ngFor="let grad of formation" class="grad-card">
   <div fxLayout="row" fxLayoutAlign="end start">

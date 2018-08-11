@@ -9,6 +9,7 @@ export class Profile {
   contacts: Array<Contact>;
   certifications: Array<Certification>;
   formation: Array<Graduation>;
+  roles: Array<{title: string, text: string}>;
 }
 
 export class Graduation {
@@ -37,6 +38,15 @@ export class ProfileService {
     p.title = 'Mobile Developer';
     p.intro = 'Sou Leonardo, analista de sistemas focado em mobile.'
       + ' Adoro participar de projetos Android e iOS com tecnologias nativas ou híbridas.';
+    p.roles = [
+      {
+        title : 'Analista de Sistemas - Mobile',
+        text : 'Experiência na atuação como líder técnico e tutor de equipes mobiles.'+
+          'Experiência em análise e desenvolvimento de aplicações móveis, além de elaboração de arquitetura das soluções.'+
+          'Desenvolvimento de soluções nativas para Android, iOS e Windows Phone, integração a serviços Web, Android NDK e personalização do sistema operacional Android.'+
+          'Desenvolvimento em tecnologias híbridas: Ionic, Cordova e IBM MobileFirst, para Android, iOS e Windows Phone.'
+      }
+    ];
     p.contacts = [
       new Contact(ContactType.email, 'contato@leosimas.com'),
       new Contact(ContactType.linkedin, 'leonardosimas')
