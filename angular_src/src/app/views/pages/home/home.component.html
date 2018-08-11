@@ -10,4 +10,10 @@
     </h2>
   </div>
 </div>
-<p class="center intro">{{textIntro}}</p>
+<p class="center intro" [innerHtml]="textIntro"></p>
+
+<div fxLayout="column"
+  fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch" fxLayoutGap="16px">
+  <app-certification-card *ngFor="let cert of certifications"
+    [certification]="cert"></app-certification-card>
+</div>
