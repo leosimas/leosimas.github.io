@@ -38,7 +38,7 @@ export class ProfileService {
 
   constructor() {
     const p = this.profile = new Profile();
-    p.pageTitle = 'Leonardo Simas';
+    p.pageTitle = 'Leonardo Simas - Mobile Developer';
     p.name = 'Leonardo';
     p.fullName = 'Leonardo Simas Gonçalves';
     p.title = 'Mobile Developer';
