@@ -1,7 +1,7 @@
 <app-toolbar #appToolbar></app-toolbar>
 <mat-drawer-container hasBackdrop="true">
   <mat-drawer #drawer mode="over" class="drawer">
-    <div fxLayout="column" fxLayoutAlign="start">
+    <div fxLayout="column" fxLayoutAlign="start" cdkFocusInitial>
       <button mat-button *ngFor="let item of menuItems" (click)="onMenuItemClick(item)">{{item.text}}</button>
     </div>
   </mat-drawer>
