@@ -21,6 +21,7 @@ export class ToolbarComponent {
   }
 
   setShowMenuOptions(show: boolean) {
+    console.log('setShowMenuOptions = ' + show);
     this.showMenuOptions = show;
   }
 
