@@ -41,23 +41,27 @@ export class AppComponent implements OnInit, OnDestroy {
     this.appToolbar.onMenuClick = function () {
       me.drawer.toggle();
     };
+    this.updateToolbar();
   }
 
   setSideDrawerStyle(change: MediaChange) {
     const showMenu = [ 'xs', 'sm' ].includes( change.mqAlias );
-    if ( this.appToolbar ) {
-      this.appToolbar.setShowMenuOptions(!showMenu);
-    }
     const shouldClose = !showMenu && this.showMenu !== showMenu;
     if ( shouldClose && this.drawer && this.drawer.opened ) {
       this.drawer.close();
     }
-
     this.showMenu = showMenu;
+    this.updateToolbar();
   }
 
   onMenuItemClick(item: MenuItem) {
     this.menuService.navigate(item);
     this.drawer.close();
+  }
+
+  private updateToolbar() {
+    if ( this.appToolbar ) {
+      this.appToolbar.setShowMenuOptions(!this.showMenu);
+    }
   }
 }
