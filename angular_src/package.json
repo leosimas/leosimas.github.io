@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "build:prod": "ng build --output-path=./dist/ && npm run postbuild",
     "postbuild": "npm run copy404",
-    "copy404": "cpy ./dist/index.html ./dist/ --rename=404.html"
+    "copy404": "cpy ./dist/index.html ./dist/ --rename=404.html",
+    "delold" : "del ./*"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "core-js": "^2.5.4",
     "cpy-cli": "2.0.0",
+    "del-cli": "1.1.0",
     "flex-layout-srcs": "github:angular/flex-layout",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
