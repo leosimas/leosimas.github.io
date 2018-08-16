@@ -1,13 +1,17 @@
 {
-  "name": "leo-simas",
-  "version": "0.0.0",
+  "name": "leo-simas-resume",
+  "version": "2.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:prod": "ng build --prod --output-path=../docs/ && npm run postbuild",
+    "postbuild": "npm run copy404 && npm run copyconfigs",
+    "copy404": "cpy ../docs/index.html ../docs/ --rename=404.html",
+    "copyconfigs" : "cpy ../_githubpages/_config.yml ../docs/"
   },
   "private": true,
   "dependencies": {
@@ -28,8 +32,10 @@
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "core-js": "^2.5.4",
+    "cpy-cli": "2.0.0",
     "flex-layout-srcs": "github:angular/flex-layout",
     "rxjs": "^6.0.0",
+    "trash-cli": "1.4.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
