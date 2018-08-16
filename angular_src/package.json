@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "ng build --output-path=./dist/ && npm run postbuild",
-    "postbuild": "npm run copy404",
-    "copy404": "cpy ./dist/index.html ./dist/ --rename=404.html",
-    "delold": "trash ../*"
+    "build:prod": "ng build --prod --output-path=../docs/ && npm run postbuild",
+    "postbuild": "npm run copy404 && npm run copyconfigs",
+    "copy404": "cpy ../docs/index.html ../docs/ --rename=404.html",
+    "copyconfigs" : "cpy ../_githubpages/_config.yml ../docs/"
   },
   "private": true,
   "dependencies": {
