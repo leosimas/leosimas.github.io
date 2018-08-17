@@ -1,6 +1,6 @@
 {
   "name": "leo-simas-resume",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,10 +8,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "ng build --prod --output-path=../docs/ && npm run postbuild",
-    "postbuild": "npm run copy404 && npm run copyconfigs",
-    "copy404": "cpy ../docs/index.html ../docs/ --rename=404.html",
-    "copyconfigs" : "cpy ../_githubpages/_config.yml ../docs/"
+    "build:prod": "ng build --prod --output-path=./dist/ && npm run postbuild",
+    "build:publish": "npm run build:prod && npm run publish",
+    "postbuild": "npm run copy_404 && npm run copy_config",
+    "copy_404": "cpy ./dist/index.html ./dist/ --rename=404.html",
+    "copy_config": "cpy ../_githubpages/_config.yml ./dist/",
+    "del_old": "node scripts/delete_old.js",
+    "cpy_new": "cpy ./dist/* ../",
+    "publish": "npm run del_old && npm run cpy_new"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +37,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "core-js": "^2.5.4",
     "cpy-cli": "2.0.0",
+    "del": "3.0.0",
     "flex-layout-srcs": "github:angular/flex-layout",
     "rxjs": "^6.0.0",
     "trash-cli": "1.4.0",
