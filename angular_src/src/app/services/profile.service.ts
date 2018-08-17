@@ -91,6 +91,13 @@ export class ProfileService {
           { name: 'JavaScript', value : 70 },
           { name: 'TypeScript', value : 50 }
         ]
+      },
+      {
+        category: 'Língua - Inglês',
+        list : [
+          { name: 'Escrita', value : 90 },
+          { name: 'Conversação', value : 80 }
+        ]
       }
     ];
   }
