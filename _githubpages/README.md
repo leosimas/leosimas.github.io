@@ -17,6 +17,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Build for production
 Run `npm run build:prod`
 
+## Build for production and publish:
+Run `npm run build:publish`
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
