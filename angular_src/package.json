@@ -1,6 +1,6 @@
 {
   "name": "leo-simas-resume",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -14,7 +14,7 @@
     "copy_404": "cpy ./dist/index.html ./dist/ --rename=404.html",
     "copy_config": "cpy ../_githubpages/* ./dist/",
     "del_old": "node scripts/delete_old.js",
-    "cpy_new": "cpy ./dist/* ../",
+    "cpy_new": "node scripts/copy_new.js",
     "publish": "npm run del_old && npm run cpy_new"
   },
   "private": true,
@@ -35,6 +35,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "copy-dir": "0.4.0",
+    "copy-dir-cli": "0.0.3",
     "core-js": "^2.5.4",
     "cpy-cli": "2.0.0",
     "del": "3.0.0",
