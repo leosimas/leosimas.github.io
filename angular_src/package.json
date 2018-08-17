@@ -12,7 +12,7 @@
     "build:publish": "npm run build:prod && npm run publish",
     "postbuild": "npm run copy_404 && npm run copy_config",
     "copy_404": "cpy ./dist/index.html ./dist/ --rename=404.html",
-    "copy_config": "cpy ../_githubpages/_config.yml ./dist/",
+    "copy_config": "cpy ../_githubpages/* ./dist/",
     "del_old": "node scripts/delete_old.js",
     "cpy_new": "cpy ./dist/* ../",
     "publish": "npm run del_old && npm run cpy_new"
