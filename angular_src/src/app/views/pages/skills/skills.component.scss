@@ -2,6 +2,14 @@
     max-width: 512px;
     min-width: 200px;
 
+    &.xs {
+        max-width: none;
+    }
+
+    &.md {
+        min-width: 300px;
+    }
+
     .skillItem {
         margin-bottom: 16px;
         .name {
