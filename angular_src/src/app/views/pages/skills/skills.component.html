@@ -1,6 +1,10 @@
-<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+<div gdColumns="auto" gdGap="16px" gdAlignRows="stretch"
+  gdColumns.gt-xs="auto auto" gdAlignRows.gt-xs="space-evenly"
+  gdColumns.gt-md="auto auto auto">
   <mat-card *ngFor="let skill of skills; let last = last"
-    class="card-category">
+    class="card-category"
+    ngClass.xs="xs"
+    ngClass.gt-sm="md">
     <h3>{{skill.category}}</h3>
     <div *ngFor="let item of skill.list; let lastItem = last"
       class="skillItem">
