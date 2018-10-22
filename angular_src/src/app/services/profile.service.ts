@@ -62,6 +62,7 @@ export class ProfileService {
       new Certification('iOS Developer Nanodegree', '', 'udacity', '/assets/certifications/ios_nanodegree_leo.pdf')
     ];
     p.formation = [
+      new Graduation(2019, 'Especialização em Desenvolvimento Mobile', 'Universidade Estácio de Sá'),
       new Graduation(2013, 'Bacharelado em Sistemas de Informação', 'UNEB - Universidade do Estado da Bahia')
     ];
     p.jobs = [
