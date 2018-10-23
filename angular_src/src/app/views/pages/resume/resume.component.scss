@@ -8,8 +8,14 @@
 }
 
 .grad-card {
+    margin-bottom: 8px;
+
     h3 {
         margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
