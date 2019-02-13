@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { ToolbarComponent } from './views/components/toolbar/toolbar.component';
 import { MatDrawer } from '@angular/material';
-import { ObservableMedia, MediaChange } from '@angular/flex-layout';
+import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 import { MenuService, MenuItem } from './services/menu.service';
 import { Title } from '../../node_modules/@angular/platform-browser';
@@ -21,13 +21,13 @@ export class AppComponent implements OnInit, OnDestroy {
   watcher: Subscription;
   menuItems: Array<MenuItem>;
 
-  constructor(media: ObservableMedia,
+  constructor(mediaObserver: MediaObserver,
     private menuService: MenuService,
     profile: ProfileService,
     titleService: Title) {
     titleService.setTitle( profile.get().pageTitle );
     this.menuItems = menuService.getItems();
-    this.watcher = media.subscribe((change: MediaChange) => {
+    this.watcher = mediaObserver.media$.subscribe((change: MediaChange) => {
       this.setSideDrawerStyle( change );
     });
   }
