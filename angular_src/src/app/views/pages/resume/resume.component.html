@@ -14,7 +14,7 @@
 </mat-card>
 
 <h2 ngClass.gt-sm="center">Qualificação</h2>
-<div fxLayout="column"
+<div fxLayout="column" class="marginCenter"
   fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-evenly stretch" fxLayoutGap="16px">
   <app-certification-card *ngFor="let cert of certifications"
     [certification]="cert"></app-certification-card>
