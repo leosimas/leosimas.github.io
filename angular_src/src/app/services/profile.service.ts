@@ -55,7 +55,8 @@ export class ProfileService {
     ];
     p.contacts = [
       new Contact(ContactType.email, 'contato@leosimas.com'),
-      new Contact(ContactType.linkedin, 'leonardosimas')
+      new Contact(ContactType.linkedin, 'leonardosimas'),
+      new Contact(ContactType.github, 'leosimas'),
     ];
     p.certifications = [
       new Certification('Associate Android Developer', 'Google Certified', 'android', 'https://www.credential.net/r358j69n'),

@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export enum ContactType {
   email,
-  linkedin
+  linkedin,
+  github
 }
 export class Contact {
   type: ContactType;
@@ -44,6 +45,12 @@ export class ContactCardComponent implements OnInit {
         this.iconName = 'linkedin';
         this.url = 'https://linkedin.com/in/' + c.text;
         this.text = 'LinkedIn';
+        break;
+      case ContactType.github:
+        this.iconType = 'fab';
+        this.iconName = 'github';
+        this.url = 'https://github.com/' + c.text;
+        this.text = 'GitHub';
         break;
     }
   }
