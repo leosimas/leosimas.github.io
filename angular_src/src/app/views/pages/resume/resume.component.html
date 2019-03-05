@@ -5,10 +5,10 @@
 </mat-card>
 
 <h2 ngClass.gt-sm="center">Formação</h2>
-<mat-card *ngFor="let grad of formation" class="grad-card" ngClass.gt-sm="marginCenter">
+<mat-card *ngFor="let grad of formation; index as i" class="grad-card" ngClass.gt-sm="marginCenter">
   <div fxLayout="row" fxLayoutAlign="end start">
     <h3 fxFlex>{{grad.title}}</h3>
-    <mat-chip-list><mat-chip disabled selected>{{grad.year}}</mat-chip></mat-chip-list>
+    <mat-chip-list><mat-chip disabled [selected]="i==0">{{grad.year}}</mat-chip></mat-chip-list>
   </div>
   <span>{{grad.institute}}</span>
 </mat-card>
