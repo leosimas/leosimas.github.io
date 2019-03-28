@@ -17,11 +17,12 @@ export class ToolbarComponent {
   constructor(private menuService: MenuService,
     profile: ProfileService) {
     this.menuItems = menuService.getItems();
-    this.name = profile.get().name;
+    profile.get().then((p) => {
+      this.name = p.name;
+    });
   }
 
   setShowMenuOptions(show: boolean) {
-    console.log('setShowMenuOptions = ' + show);
     this.showMenuOptions = show;
   }
 
