@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Certification } from '../../components/certification-card/certification-card.component';
-import { ProfileService, Graduation, Profile } from '../../../services/profile.service';
+import { ProfileService } from '../../../services/profile.service';
+import { Certification } from 'src/app/models/certification';
+import { Graduation } from 'src/app/models/graduation';
+import { Job } from 'src/app/models/job';
+import { Role } from 'src/app/models/role';
 
 @Component({
   selector: 'app-resume',
@@ -11,8 +14,8 @@ export class ResumeComponent implements OnInit {
 
   certifications: Array<Certification>;
   formation: Array<Graduation>;
-  roles: Array<any>;
-  jobs: Array<any>;
+  roles: Array<Role>;
+  jobs: Array<Job>;
 
   constructor(profile: ProfileService) {
     profile.get().then((p) => {

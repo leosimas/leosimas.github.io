@@ -1,35 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Contact, ContactType } from '../views/components/contact-card/contact-card.component';
-import { Certification } from '../views/components/certification-card/certification-card.component';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-export class Profile {
-  pageTitle: string;
-  name: string;
-  fullName: string;
-  intro: string;
-  title: string;
-  contacts: Array<Contact>;
-  certifications: Array<Certification>;
-  formation: Array<Graduation>;
-  roles: Array<{title: string, text: string}>;
-  jobs: Array<{}>;
-  skills: Array<{}>;
-}
-
-export class Graduation {
-  title: string;
-  institute: string;
-  year: number;
-  constructor(year: number,
-    title: string,
-    institute: string) {
-      this.title = title;
-      this.institute = institute;
-      this.year = year;
-  }
-}
+import { Profile } from '../models/profile';
 
 @Injectable({
   providedIn: 'root'

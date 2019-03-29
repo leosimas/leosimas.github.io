@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../../services/profile.service';
+import { Skill } from 'src/app/models/skill';
 
 @Component({
   selector: 'app-skills',
@@ -7,7 +8,8 @@ import { ProfileService } from '../../../services/profile.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  skills: {}[];
+
+  skills: Skill[];
 
   constructor(profile: ProfileService) {
     profile.get().then((p) => {
