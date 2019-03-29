@@ -1,0 +1,72 @@
+{
+    "pageTitle" : "Leonardo Simas - Mobile Developer",
+    "name" : "Leonardo",
+    "fullName" : "Leonardo Simas Gonçalves",
+    "title" : "Mobile Developer",
+    "intro" : "Sou Leonardo, analista de sistemas focado em mobile.<br/>Adoro atuar em projetos Android e iOS com tecnologias nativas e híbridas também.<br/>",
+    "roles" : [
+        {
+            "title" : "Analista de Sistemas - Mobile",
+            "text" : "Experiência na atuação como líder técnico e tutor de equipes mobiles. Experiência em análise e desenvolvimento de aplicações móveis, além de elaboração de arquitetura das soluções. Desenvolvimento de soluções nativas para Android, iOS e Windows Phone, integração a serviços Web, Android NDK e personalização do sistema operacional Android. Desenvolvimento em tecnologias híbridas: Ionic, Cordova e IBM MobileFirst, para Android, iOS e Windows Phone."
+        }
+    ],
+    "contacts" : [
+        { "type" : "email", "text" : "contato@leosimas.com" },
+        { "type" : "linkedin", "text" : "leonardosimas" },
+        { "type" : "github", "text" : "leosimas" }
+    ],
+    "certifications" : [
+        {
+            "title" : "Associate Android Developer",
+            "description" : "Google Certified",
+            "iconClass" : "android",
+            "url" : "https://www.credential.net/r358j69n"
+        },
+        {
+            "title" : "iOS Developer Nanodegree",
+            "description" : "",
+            "iconClass" : "udacity",
+            "url" : "/assets/certifications/ios_nanodegree_leo.pdf"
+        }
+    ],
+    "formation" : [
+        { "year" : 2019, "title" : "Especialização em Desenvolvimento Mobile", "institute" : "Universidade Estácio de Sá" },
+        { "year" : 2013, "title" : "Bacharelado em Sistemas de Informação", "institute" : "UNEB - Universidade do Estado da Bahia" }
+    ],
+    "jobs" : [
+        { "title" : "Analista de Sistemas Sênior", "company" : "Capgemini", "period" : "2017 - atual", "current" : true },
+        { "title" : "Analista de Sistemas Pleno", "company" : "asdads", "period" : "2014 - 2017" },
+        { "title" : "Analista de Sistemas Júnior", "company" : "asdads", "period" : "2014" },
+        { "title" : "Programador", "company" : "SENAI", "period" : "2013 - 2014" },
+        { "title" : "Programador", "company" : "CPTec - UNEB", "period" : "2012 - 2013" },
+        { "title" : "Programador", "company" : "Instituto Recôncavo de Tecnologia", "period" : "2011 - 2012" },
+        { "title" : "Estagiário", "company" : "Instituto Recôncavo de Tecnologia", "period" : "2010 - 2011" },
+        { "title" : "Desenvolvedor", "company" : "Consult Jr. - UNEB", "period" : "2008 - 2010" }
+    ],
+    "skills" : [
+        {
+            "category": "Mobile",
+            "list" : [
+                { "name": "Android", "value" : 90 },
+                { "name": "iOS", "value" : 70 },
+                { "name": "Ionic", "value" : 65 }
+            ]
+        },
+        {
+            "category": "Programação",
+            "list" : [
+                { "name": "Java", "value" : 90 },
+                { "name": "Swift", "value" : 80 },
+                { "name": "JavaScript", "value" : 70 },
+                { "name": "TypeScript", "value" : 70 }
+            ]
+        },
+        {
+            "category": "Língua - Inglês",
+            "list" : [
+                { "name": "Escrita", "value" : 90 },
+                { "name": "Conversação", "value" : 80 }
+            ]
+        }
+    ]
+}
