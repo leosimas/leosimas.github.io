@@ -49,7 +49,7 @@
             "list" : [
                 { "name": "Android", "value" : 90 },
                 { "name": "iOS", "value" : 70 },
-                { "name": "Ionic", "value" : 50 }
+                { "name": "Ionic", "value" : 65 }
             ]
         },
         {
