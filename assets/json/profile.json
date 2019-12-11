@@ -34,7 +34,8 @@
         { "year" : 2013, "title" : "Bacharelado em Sistemas de Informação", "institute" : "UNEB - Universidade do Estado da Bahia" }
     ],
     "jobs" : [
-        { "title" : "Analista de Sistemas Sênior", "company" : "Capgemini", "period" : "2017 - atual", "current" : true },
+        { "title" : "Especialista Multiplataforma", "company" : "Capgemini", "period" : "2019 - atual", "current" : true },
+        { "title" : "Analista de Sistemas Sênior", "company" : "Capgemini", "period" : "2017 - 2019"},
         { "title" : "Analista de Sistemas Pleno", "company" : "Capgemini", "period" : "2014 - 2017" },
         { "title" : "Analista de Sistemas Júnior", "company" : "MTM Tecnologia", "period" : "2014" },
         { "title" : "Programador", "company" : "SENAI", "period" : "2013 - 2014" },
@@ -56,6 +57,7 @@
         {
             "category": "Programação",
             "list" : [
+                { "name": "Kotlin", "value" : 80 },
                 { "name": "Java", "value" : 90 },
                 { "name": "Swift", "value" : 80 },
                 { "name": "JavaScript", "value" : 70 },
