@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../../services/profile.service';
+import { Certification } from 'src/app/models/certification';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   textName: string;
   textIntro: string;
   textTitle: string;
-  certifications: any;
+  certifications: Certification[];
 
   constructor(profileService: ProfileService) {
     profileService.get()
