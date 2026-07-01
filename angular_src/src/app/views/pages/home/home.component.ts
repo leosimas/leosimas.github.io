@@ -14,11 +14,13 @@ export class HomeComponent implements OnInit {
   certifications: any;
 
   constructor(profileService: ProfileService) {
-    const p = profileService.get();
-    this.textName = p.fullName;
-    this.textTitle = p.title;
-    this.textIntro = p.intro;
-    this.certifications = p.certifications;
+    profileService.get()
+      .then((p) => {
+        this.textName = p.fullName;
+        this.textTitle = p.title;
+        this.textIntro = p.intro;
+        this.certifications = p.certifications;
+      });
   }
 
   ngOnInit() {

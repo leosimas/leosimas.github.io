@@ -14,7 +14,9 @@ export class ContactComponent implements OnInit {
   constructor(private profile: ProfileService) { }
 
   ngOnInit() {
-    this.contacts = this.profile.get().contacts;
+    this.profile.get().then((profile) => {
+      this.contacts = profile.contacts;
+    });
   }
 
 }

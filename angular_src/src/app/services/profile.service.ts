@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Contact, ContactType } from '../views/components/contact-card/contact-card.component';
 import { Certification } from '../views/components/certification-card/certification-card.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export class Profile {
   pageTitle: string;
@@ -36,75 +38,23 @@ export class ProfileService {
 
   private profile: Profile;
 
-  constructor() {
-    const p = this.profile = new Profile();
-    p.pageTitle = 'Leonardo Simas - Mobile Developer';
-    p.name = 'Leonardo';
-    p.fullName = 'Leonardo Simas Gonçalves';
-    p.title = 'Mobile Developer';
-    p.intro = 'Sou Leonardo, analista de sistemas focado em mobile.<br/>'
-      + 'Adoro atuar em projetos Android e iOS com tecnologias nativas e híbridas também.<br/>';
-    p.roles = [
-      {
-        title : 'Analista de Sistemas - Mobile',
-        text : 'Experiência na atuação como líder técnico e tutor de equipes mobiles.'+
-          ' Experiência em análise e desenvolvimento de aplicações móveis, além de elaboração de arquitetura das soluções.'+
-          ' Desenvolvimento de soluções nativas para Android, iOS e Windows Phone, integração a serviços Web, Android NDK e personalização do sistema operacional Android.'+
-          ' Desenvolvimento em tecnologias híbridas: Ionic, Cordova e IBM MobileFirst, para Android, iOS e Windows Phone.'
-      }
-    ];
-    p.contacts = [
-      new Contact(ContactType.email, 'contato@leosimas.com'),
-      new Contact(ContactType.linkedin, 'leonardosimas'),
-      new Contact(ContactType.github, 'leosimas'),
-    ];
-    p.certifications = [
-      new Certification('Associate Android Developer', 'Google Certified', 'android', 'https://www.credential.net/r358j69n'),
-      new Certification('iOS Developer Nanodegree', '', 'udacity', '/assets/certifications/ios_nanodegree_leo.pdf')
-    ];
-    p.formation = [
-      new Graduation(2019, 'Especialização em Desenvolvimento Mobile', 'Universidade Estácio de Sá'),
-      new Graduation(2013, 'Bacharelado em Sistemas de Informação', 'UNEB - Universidade do Estado da Bahia')
-    ];
-    p.jobs = [
-      { title: 'Analista de Sistemas Sênior', company:'Capgemini', period: '2017 - atual', current: true },
-      { title: 'Analista de Sistemas Pleno', company:'Capgemini', period: '2014 - 2017' },
-      { title: 'Analista de Sistemas Júnior', company:'MTM Tecnologia', period: '2014' },
-      { title: 'Programador', company:'SENAI', period: '2013 - 2014' },
-      { title: 'Programador', company:'CPTec - UNEB', period: '2012 - 2013' },
-      { title: 'Programador', company:'Instituto Recôncavo de Tecnologia', period: '2011 - 2012' },
-      { title: 'Estagiário', company:'Instituto Recôncavo de Tecnologia', period: '2010 - 2011' },
-      { title: 'Desenvolvedor', company:'Consult Jr. - UNEB', period: '2008 - 2010' }
-    ];
-    p.skills = [
-      {
-        category: 'Mobile',
-        list : [
-          { name: 'Android', value : 90 },
-          { name: 'iOS', value : 70 },
-          { name: 'Ionic', value : 50 }
-        ]
-      },
-      {
-        category: 'Programação',
-        list : [
-          { name: 'Java', value : 90 },
-          { name: 'Swift', value : 75 },
-          { name: 'JavaScript', value : 70 },
-          { name: 'TypeScript', value : 50 }
-        ]
-      },
-      {
-        category: 'Língua - Inglês',
-        list : [
-          { name: 'Escrita', value : 90 },
-          { name: 'Conversação', value : 80 }
-        ]
-      }
-    ];
+  constructor(private http: HttpClient) {
   }
 
-  get(): Profile {
-    return this.profile;
+  get(): Promise<Profile> {
+    return new Promise<Profile>((resolve, reject) => {
+      if ( this.profile ) {
+        resolve(this.profile);
+        return;
+      }
+
+      this.http.get('/assets/json/profile.json').toPromise()
+        .then((response) => {
+          console.log('profile loaded:, ', response);
+          this.profile = response as Profile;
+          resolve(this.profile);
+        })
+        .catch(reject);
+    });
   }
 }

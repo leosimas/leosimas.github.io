@@ -8,9 +8,11 @@ import { ProfileService } from '../../../services/profile.service';
 })
 export class SkillsComponent implements OnInit {
   skills: {}[];
-  
+
   constructor(profile: ProfileService) {
-    this.skills = profile.get().skills;
+    profile.get().then((p) => {
+      this.skills = p.skills;
+    });
    }
 
   ngOnInit() {

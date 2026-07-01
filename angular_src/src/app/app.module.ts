@@ -20,6 +20,7 @@ import { ResumeComponent } from './views/pages/resume/resume.component';
 import { ContactCardComponent } from './views/components/contact-card/contact-card.component';
 import { CertificationCardComponent } from './views/components/certification-card/certification-card.component';
 import { SkillsComponent } from './views/pages/skills/skills.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // Add an icon to the library for convenient access in other components
 library.add(fas, fab);
@@ -42,7 +43,8 @@ library.add(fas, fab);
     FontAwesomeModule,
     FlexLayoutModule,
     MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule,
-    MatCardModule, MatChipsModule, MatProgressBarModule
+    MatCardModule, MatChipsModule, MatProgressBarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

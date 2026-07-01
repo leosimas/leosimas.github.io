@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 export enum ContactType {
-  email,
-  linkedin,
-  github
+  email = 'email',
+  linkedin = 'linkedin',
+  github = 'github'
 }
+
 export class Contact {
   type: ContactType;
   text: string;

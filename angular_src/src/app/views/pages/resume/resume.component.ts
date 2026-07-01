@@ -15,11 +15,12 @@ export class ResumeComponent implements OnInit {
   jobs: Array<any>;
 
   constructor(profile: ProfileService) {
-    const p = profile.get();
-    this.certifications = p.certifications;
-    this.formation = p.formation;
-    this.roles = p.roles
-    this.jobs = p.jobs;
+    profile.get().then((p) => {
+      this.certifications = p.certifications;
+      this.formation = p.formation;
+      this.roles = p.roles;
+      this.jobs = p.jobs;
+    });
   }
 
   ngOnInit() {
